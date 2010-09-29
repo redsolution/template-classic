@@ -49,8 +49,8 @@
 #footer-block {
     background: #CCE;
 }
-{% endif %}
-{% ifequal color template_settings.theme "G" %}
+{% endifequal %}
+{% ifequal template_settings.theme "G" %}
 #header-block {
     background: #323;
 }
@@ -70,4 +70,4 @@
 #footer-block {
     background: #223;
 }
-{% endif %}
+{% endifequal %}
