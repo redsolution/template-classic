@@ -1,0 +1,73 @@
+@import url('base.css');
+
+#header-block {
+    width: 100%;
+    padding: 1%;
+}
+
+#left-block {
+    width: 20%;
+    float: left;
+    padding: 1%;
+}
+
+#center-block {
+    width: 54%;
+    float: left;
+    padding: 1%;
+}
+
+#right-block {
+    width: 20%;
+    float: left;
+    padding: 1%;
+}
+
+#footer-block {
+    width: 100%;
+    clear: both;
+    padding: 1%;
+}
+
+{% ifequal template_settings.theme "R" %}
+#header-block {
+    background: #ECE;
+}
+
+#left-block {
+    background: #CEE;
+}
+
+#center-block {
+    background: #CEC;
+}
+
+#right-block {
+    background: #EEC;
+}
+
+#footer-block {
+    background: #CCE;
+}
+{% endif %}
+{% ifequal color template_settings.theme "G" %}
+#header-block {
+    background: #323;
+}
+
+#left-block {
+    background: #233;
+}
+
+#center-block {
+    background: #232;
+}
+
+#right-block {
+    background: #332;
+}
+
+#footer-block {
+    background: #223;
+}
+{% endif %}
