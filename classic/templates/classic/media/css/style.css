@@ -1,73 +1,252 @@
 @import url('base.css');
 
+body, html {
+	height: 100%;
+}
+
+.padding-1 { padding: 0 20px; }
+.padding-2 { padding: 20px; }
+
+#wrapper {
+	width: 960px;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	height: 100%;
+	height: auto !important;
+	min-height: 100%;
+	margin: 0 auto -80px auto;
+	background: #fff;
+	position: relative;
+}
+
 #header-block {
-    width: 100%;
-    padding: 1%;
+	border-top: 8px solid #999999;
+	height: 100px;
+	padding: 0 20px;
 }
 
-#left-block {
-    width: 20%;
-    float: left;
-    padding: 1%;
+#logo {
+	display: table-cell;
+	height: 100px;
+	vertical-align: middle;
+	float: none;
+	_position: relative;
+	_top: 50%;
+	_height: auto; 
 }
 
-#center-block {
-    width: 54%;
-    float: left;
-    padding: 1%;
+#logo img {
+	_position: relative;
+	_top: -50%;
+}
+
+#menu {
+	float: right;
+}
+
+#menu ul {
+	overflow: hidden;
+	margin: 0;
+	paddin: 0;
+}
+
+#menu li {
+	float: left;
+	height: 100px;
+	text-transform: uppercase;
+	margin: 0 8px;
+	list-style: none;
+}
+
+#menu a {
+	text-decoration: none;
+	line-height: 100px;
+	padding: 0 16px;
+	font-size: 18px;
+	color: #666;
+	display: block;
+}
+
+#menu a:hover {
+	background: #dfdfdf;
+	color: #000;
+}
+
+#splash {
+	width: 960px;
+	height: 240px;
+	background: url(/media/img/splash.jpg) no-repeat;
+	position: relative;
+}
+
+.siteinfo {
+	color: #fff;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	text-align: right;
+}
+
+.siteinfo h1, .siteinfo h3 {
+	font-weight: normal;
+	margin: 0;
+	color: #fff;
+}
+
+.siteinfo h1 { font-size: 48px; }
+.siteinfo h3 { font-size: 24px; }
+
+#middle-block {
+	padding: 20px;
+	overflow: hidden;
+	_zoom: 1;
 }
 
 #right-block {
-    width: 20%;
-    float: left;
-    padding: 1%;
-}
-
-#footer-block {
-    width: 100%;
-    clear: both;
-    padding: 1%;
-}
-
-{% ifequal template_settings.theme "R" %}
-#header-block {
-    background: #ECE;
-}
-
-#left-block {
-    background: #CEE;
+	width: 230px;
+	float: right;
 }
 
 #center-block {
-    background: #CEC;
+	width: 668px;
+	float: left;
 }
 
-#right-block {
-    background: #EEC;
+.news-date {
+	color: #999;
+	font-size: 14px;
 }
 
-#footer-block {
-    background: #CCE;
-}
-{% endifequal %}
-{% ifequal template_settings.theme "G" %}
-#header-block {
-    background: #323;
+.news-title a {
+	color: #990000 !important;
+	font-size: 18px;
+	line-height: 22px;
 }
 
-#left-block {
-    background: #233;
+.news-short {
+	color: #333;
+	font-size: 14px;
+	margin-bottom: 20px;
 }
 
-#center-block {
-    background: #232;
-}
-
-#right-block {
-    background: #332;
+.news-short p {
+	margin: 6px 0;
+	line-height: 19px !important;
 }
 
 #footer-block {
-    background: #223;
+	width: 920px;
+	background: #999;
+	height: 80px;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	margin: 0 auto;
+	overflow: hidden;
+	line-height: 80px;
+	padding: 0 20px;
+	position: relative;
 }
-{% endifequal %}
+
+#bottom {
+	text-align: center;
+	color: #efefef;
+}
+
+#copyright {
+	color: #dfdfdf;
+	float: left;
+}
+
+#powered {
+	color: #f4f4f4;
+	float: right;
+}
+
+#push {
+	height: 80px;
+}
+
+/* Catalog */
+
+ul.catalog {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.catalog li {
+	margin: 0 20px 30px 0;
+	background: #fff;
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+}
+
+ul.catalog img {
+	display: block;
+	margin: 4px 0;
+	border: 1px solid #ccc;
+}
+
+ul.catalog a {
+	font-size: 18px;
+}
+
+.desc {
+	color: #666;
+	font-size: 14px;
+	line-height: 16px;
+	margin: 4px 0;
+}
+
+.price {
+	color: #000;
+	font-size: 20px;
+}
+
+#basket {
+	font-size: 16px;
+	color: #666;
+	line-height: 21px;
+	margin-bottom: 40px;
+}
+
+.total-price {
+	display: inline;
+	color: #000;
+	font-weight: bold;
+}
+
+.checkout {
+	font-size: 18px;
+	margin: 3px 0;
+}
+
+.checkout a {
+	color: #000;
+}
+
+ul.tree {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+ul.tree li {
+	font-size: 15px;
+	line-height: 24px;
+	margin: 0;
+}
+
+ul.tree li a {
+	color: #990000;
+}
+
+ul.tree li ul {
+	margin: 4px 0 4px 12px;
+	list-style: none;
+}
+
+ul.tree li ul li a {
+	color: #666;
+}

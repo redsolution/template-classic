@@ -1,4 +1,4 @@
-{% load redsolutioncms_tags %}{% raw %}{% block html %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% block html %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 {% block head %}
@@ -18,22 +18,71 @@
 </head>
 <body>
 {% block body %}
-    !Classic!
-    <div id="header-block">{% block header %}{% endblock header %}</div>
-    <div id="middle-block">
-    {% block middle %}
-        <div id="left-block">{% block left %}{% endblock left %}</div>
-        <div id="center-block">
-        {% block center %}
-            <h1 id="content-title">{% block content_title %}{% endblock %}</h1>
-            <div id="content-block">{% block content %}{% endblock %}</div>
-        {% endblock center %}
+    <div id="wrapper">
+        <div id="header-block">
+            {% block header %}
+                <div id="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Details</a></li>
+                        <li><a href="#">Example</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            <div id="logo"><img src="/media/img/logo.png" alt="" /></div>
+            {% endblock header %}
         </div>
-        <div id="right-block">{% block right %}{% endblock right %}</div>
-    {% endblock middle %}
+        
+        <div id="splash">
+            <div class="siteinfo">
+                <h1>Sitename</h1>
+                <h3>description of your website</h3>
+            </div>
+        </div>
+        
+        <div id="middle-block">
+        {% block middle %}
+            <div id="right-block">
+                {% block right %}
+                    <div class="news-list">
+                        <h2>Latest News</h2>
+                        <div class="news-date">12-08-2010</div>
+                        <div class="news-title"><a href="#">Rain hampers China rescue effort</a></div>
+                        <div class="news-short">
+                            <p>Thunderstorms overnight triggered mudslides that swept away six houses in a village near Zhouqu town, leaving three people missing.</p>
+                        </div>
+                        <div class="news-date">11-08-2010</div>
+                        <div class="news-title"><a href="#">Deadly fires rage on in Portugal</a></div>
+                        <div class="news-short">
+                            <p>Thunderstorms overnight triggered mudslides that swept away six houses in a village near Zhouqu town, leaving three people missing.</p>
+                        </div>
+                        <div class="news-date">10-08-2010</div>
+                        <div class="news-title"><a href="#">Australia convicts Iraqi of people smuggling</a></div>
+                        <div class="news-short">
+                            <p>Thunderstorms overnight triggered mudslides that swept away six houses in a village near Zhouqu town, leaving three people missing.</p>
+                        </div>
+                    </div>
+                {% endblock right %}
+            </div>
+            <div id="center-block">
+            {% block center %}
+                <h1 id="content-title">{% block content_title %}{% endblock %}</h1>
+                <div id="content-block">{% block content %}{% endblock %}</div>
+            {% endblock center %}
+            </div>
+        {% endblock middle %}
+        </div>
+        <div id="push"></div>
     </div>
-    <div id="footer-block">{% block footer %}{% endblock footer %}</div>
+    <div id="footer-block">
+        {% block footer %}
+            <div id="copyright">© Redsolution, 2010</div>
+            <div id="powered">Powered by Django</div>
+            <div id="bottom">Your contacts here</div>
+        {% endblock footer %}
+    </div>
 {% endblock body %}
 </body>
 </html>
-{% endblock html %}{% endraw %}
+{% endblock html %}
