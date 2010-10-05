@@ -1,5 +1,1 @@
-================
-template-classic
-================
-
-Manafic.
+README
