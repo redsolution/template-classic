@@ -19,12 +19,12 @@ class Make(BaseMake):
 
         cms_settings.copy_to(
             os.path.join(cms_settings.project_dir, 'media',),
-            os.path.join(os.path.dirname(__file__), 'classic', 'media'),
+            os.path.join(os.path.dirname(__file__), 'templates', 'classic', 'media'),
             merge=True
         )
         cms_settings.copy_to(
             os.path.join(cms_settings.project_dir, 'templates',),
-            os.path.join(os.path.dirname(__file__), 'classic', 'templates'),
+            os.path.join(os.path.dirname(__file__), 'templates', 'classic', 'templates'),
             merge=True
         )
 #        template_settings = TemplateSettings.objects.get_settings()
