@@ -27,9 +27,5 @@ class Make(BaseMake):
             os.path.join(os.path.dirname(__file__), 'templates', 'classic', 'templates'),
             merge=True
         )
-#        template_settings = TemplateSettings.objects.get_settings()
-#        cms_settings.render_to(['..', 'media', 'css', 'style.css'], 'classic/media/css/style.css', {
-#            'template_settings': template_settings,
-#        }, 'w')
 
 make = Make()
