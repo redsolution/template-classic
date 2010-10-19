@@ -166,6 +166,44 @@ body, html {
 	height: 80px;
 }
 
+#breadcrumbs {
+	overflow: hidden;
+	margin: 10px 0;
+}
+
+#breadcrumbs ul {
+	padding: 0;
+	margin: 0;
+	list-style: 0;
+}
+
+#breadcrumbs li {
+	float: left;
+	margin-left: 4px;
+	font-size: 11px;
+}
+
+#breadcrumbs a {
+	color: #427BAD;
+}
+
+#full-menu ul {
+	list-style: square;
+	color: #666;
+	padding: 0 0 0 10px;
+	margin: 0;
+}
+
+#full-menu li {
+	margin: 4px 0;
+	line-height: 16px;
+	font-size: 11px;
+}
+
+#full-menu a {
+	color: #427BAD;
+}
+
 /* Catalog */
 
 ul.catalog {
