@@ -22,13 +22,7 @@
         <div id="header-block">
             {% block header %}
                 <div id="menu">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Details</a></li>
-                        <li><a href="#">Example</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
+                    {% block main_menu %}{% endblock %}
                 </div>
             <div id="logo"><img src="/media/img/logo.png" alt="" /></div>
             {% endblock header %}
@@ -47,21 +41,6 @@
                 {% block right %}
                     <div class="news-list">
                         <h2>Latest News</h2>
-                        <div class="news-date">12-08-2010</div>
-                        <div class="news-title"><a href="#">Rain hampers China rescue effort</a></div>
-                        <div class="news-short">
-                            <p>Thunderstorms overnight triggered mudslides that swept away six houses in a village near Zhouqu town, leaving three people missing.</p>
-                        </div>
-                        <div class="news-date">11-08-2010</div>
-                        <div class="news-title"><a href="#">Deadly fires rage on in Portugal</a></div>
-                        <div class="news-short">
-                            <p>Thunderstorms overnight triggered mudslides that swept away six houses in a village near Zhouqu town, leaving three people missing.</p>
-                        </div>
-                        <div class="news-date">10-08-2010</div>
-                        <div class="news-title"><a href="#">Australia convicts Iraqi of people smuggling</a></div>
-                        <div class="news-short">
-                            <p>Thunderstorms overnight triggered mudslides that swept away six houses in a village near Zhouqu town, leaving three people missing.</p>
-                        </div>
                     </div>
                 {% endblock right %}
             </div>

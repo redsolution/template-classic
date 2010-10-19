@@ -17,12 +17,12 @@ class Make(BaseMake):
         super(Make, self).make()
         cms_settings = CMSSettings.objects.get_settings()
 
-        cms_settings.copy_to(
+        cms_settings.copy_dir(
             os.path.join(cms_settings.project_dir, 'media',),
             os.path.join(os.path.dirname(__file__), 'templates', 'classic', 'media'),
             merge=True
         )
-        cms_settings.copy_to(
+        cms_settings.copy_dir(
             os.path.join(cms_settings.project_dir, 'templates',),
             os.path.join(os.path.dirname(__file__), 'templates', 'classic', 'templates'),
             merge=True
