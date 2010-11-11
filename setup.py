@@ -13,7 +13,7 @@ setup(
     name="redsolutioncms.template-classic",
     version="0.1.0",
     description=("Default template fot RedsoultionCMS"),
-    license="LGPL",
+    license="cc by",
     keywords="redsoutioncms template",
 
     author="Alexey Kuligin",
