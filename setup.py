@@ -26,7 +26,7 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
-        'License :: Freely Distributable',
+        'License :: OSI Approved :: Common Public License',
         'Framework :: Django',
         'Environment :: Web Environment',
         'Natural Language :: Russian',
